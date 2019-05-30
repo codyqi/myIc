@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			*{margin: 0; padding: 0;}
+			body{
+				font-size: 16px;
+			}
+			ul{
+				list-style: none;
+					display: flex;
+					text-align: center;
+			}
+			ul li{
+				width: 25%;
+				height: .57rem;
+				line-height: .57rem;
+			}
+			.produces{
+				width: 100%;
+				height: 2rem;
+				border-top: 1px solid #e0e0e0;
+				border-bottom: 1px solid #e0e0e0;
+				margin-bottom: .22rem;
+			}
+			.produces>div{
+				float: left;
+			}
+			.photo{
+				width: 1.6rem;
+				height: 1.6rem;
+				margin: .2rem .5rem 0 .2rem;
+			}
+			.produces>div:nth-child(2){
+				width: 5.2rem;
+			}
+			.photo img{
+				width: 1.6rem;
+				height: 1.6rem;
+			}
+			.name h2{
+				margin-top: .4rem;
+				height: .3rem;
+				font-size: .3rem;
+			}
+			.name p, .name h3{
+				margin-top: .3rem;
+				height: .24rem;
+				font-size: .24rem;
+			}
+			.name span{
+				color: #5cbcf4;
+				margin-right: .6rem;
+			}
+			.name .last{
+				margin-right: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<ul>
+				<li>推荐</li>
+				<li>快讯</li>
+				<li>产品</li>
+				<li>商机</li>
+			</ul>
+		</div>
+		<div class="produces">
+			<div class="photo">
+				<img src="tu.jpg"/>
+			</div>
+			<div class="name">
+				<h2>X光扫描仪</h2>
+				<p><span>地区： 倍镜</span><span>类别： 设备</span><span class="last">状态 ： 全新</span></p>
+				<h3>领域互联</h3>
+			</div>
+		</div>
+		<div class="produces">
+			<div class="photo">
+				<img src="tu.jpg"/>
+			</div>
+			<div class="name">
+				<h2>X光扫描仪</h2>
+				<p><span>地区： 倍镜</span><span>类别： 设备</span><span class="last">状态 ： 全新</span></p>
+				<h3>领域互联</h3>
+			</div>
+		</div>
+		<div class="produces">
+			<div class="photo">
+				<img src="tu.jpg"/>
+			</div>
+			<div class="name">
+				<h2>X光扫描仪</h2>
+				<p><span>地区： 倍镜</span><span>类别： 设备</span><span class="last">状态 ： 全新</span></p>
+				<h3>领域互联</h3>
+			</div>
+		</div>
+		<div class="produces">
+			<div class="photo">
+				<img src="tu.jpg"/>
+			</div>
+			<div class="name">
+				<h2>X光扫描仪</h2>
+				<p><span>地区： 倍镜</span><span>类别： 设备</span><span class="last">状态 ： 全新</span></p>
+				<h3>领域互联</h3>
+			</div>
+		</div>
+		<div class="produces">
+			<div class="photo">
+				<img src="tu.jpg"/>
+			</div>
+			<div class="name">
+				<h2>X光扫描仪</h2>
+				<p><span>地区： 倍镜</span><span>类别： 设备</span><span class="last">状态 ： 全新</span></p>
+				<h3>领域互联</h3>
+			</div>
+		</div>
+		<div class="produces">
+			<div class="photo">
+				<img src="tu.jpg"/>
+			</div>
+			<div class="name">
+				<h2>X光扫描仪</h2>
+				<p><span>地区： 倍镜</span><span>类别： 设备</span><span class="last">状态 ： 全新</span></p>
+				<h3>领域互联</h3>
+			</div>
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+//		setTimeout(function(){
+//			$(".produces").css("background","blue")
+//		},2000)
+//		$(".produces").click(function(){
+//			alert("哈哈")
+//		})
+		function rem (doc, win) {  
+			  let docEl = doc.documentElement; //html 考虑以及兼容了 屏幕旋转的事件
+			  //判断事件orientationchange 横屏 事件  或resize 
+			  let resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';  
+			  
+			  		let recalc = function () {         
+			  			var clientWidth = docEl.clientWidth;   //获取屏幕大小
+			  			if (!clientWidth){ return };   //未获取屏幕尺寸        
+			  			//屏幕大于750
+			  			if (clientWidth >= 750) {
+			                 docEl.style.fontSize = '100px';
+			            } else {
+//			            	html的font-size         100* 设备宽度 / 750
+			                 docEl.style.fontSize = 100*(clientWidth / 750)+ 'px';
+			            }
+			      };   
+			      if (!doc.addEventListener) {return ;}//addEventListener 兼容判断
+  
+			    win.addEventListener(resizeEvt, recalc, false);               // 屏幕大小以及旋转变化自适应
+			    doc.addEventListener('DOMContentLoaded', recalc, false);     // 页面初次打开自适应
+			    recalc();
+			}
+			rem(document,window);
+	</script>
+</html>
